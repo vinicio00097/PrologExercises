@@ -1,0 +1,7 @@
+createFile(NameFile,ContentFile):-
+    string_concat(NameFile,".pl",FinalName),
+    open(FinalName,write,Stream),
+    write(Stream,ContentFile),nl(Stream),
+    write(random(4)),
+    close(Stream).
+
